@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit_authenticator as stauth
-from streamlit_authenticator.utilities.exceptions import (CredentialsError, ForgotError, LoginError, RegisterError, ResetError, UpdateError)
 import sqlite3
 
 from cadastro_stream import cadastro
@@ -42,7 +41,7 @@ authenticator = stauth.Authenticate(config['credentials'], config['cookie']['nam
 # Criando widget login
 try:
     authenticator.login()
-except LoginError as e:
+except stauth.utilities.exceptions.LoginError as e:
     st.error(e)
 
 # ========================================== HOME CASO LOGIN ESTEJA FEITO ==============================================

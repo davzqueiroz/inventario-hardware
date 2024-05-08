@@ -2,3 +2,4 @@ streamlit
 streamlit_authenticator
 streamlit_authenticator.utilities.exceptions
 sqlite3
+pandas

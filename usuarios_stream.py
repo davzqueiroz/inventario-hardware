@@ -13,4 +13,3 @@ def usuarios():
     with connection('bank_rad') as conn:
         df = pd.read_sql_query("SELECT * FROM USUARIOS_STREAMLIT", conn)
         st.dataframe(df)
-
